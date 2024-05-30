@@ -69,4 +69,102 @@ catName.appendChild(frag);
  * innerHTML, innerText, textContent
 */
 
+const header = document.querySelector('header');
+header.textContent = 'HI Toby';
+ header.style.color = 'blue';
+ header.style.background = 'var(--sixtg-color)';
+    
+/**
+ * Modify the style and/or CSS classes of an element 
+ * in response to user interactions using the 
+ * style or classList properties.
+ */
 
+const allClass = document.querySelectorAll('.liStyle');
+
+    allClass.forEach(allClass =>{
+        allClass.style.background = 'var(--secondary-color)'
+        allClass.style.textAlign = 'center'
+        allClass.style.color = ' white';
+        allClass.style.padding = '10px';
+        allClass.style.width = '100px'
+        allClass.style.display = 'inline-flex';
+        allClass.style.justifyContent = 'center';
+        allClass.style.borderRadius = '800px';
+       allClass.style.border = '1px solid var(--fourth-color)' 
+        allClass.style.boxShadow = '3px 3px 4px var(--primary-color)';
+        allClass.addEventListener('click', () => {
+                allClass.style.color = 'yellow'; 
+                allClass.style.fontSize = '20px'; 
+                allClass.style.background = 'red';
+                })
+        })
+    
+ 
+
+    /**
+     * Modify at least one attribute of an 
+     * element in response to user interaction.
+     */
+
+       const breeding = document.getElementById('breeds')
+       breeding.style.borderRadius = "100%"
+       breeding.addEventListener('click', () =>{
+
+            if(breeding.style.background === 'yellow'){
+                breeding.style.background = 'red';
+            } else  {
+                breeding.style.background = 'yellow';
+
+            }
+
+        })
+  
+        /**
+         * Register at least two different event 
+         * listeners and create the associated 
+         * event handler functions.
+         */
+
+    const footFoot = document.querySelector('.newStyle');
+    footFoot.addEventListener('click', () => {
+        footFoot.style.background = 'red'
+        footFoot.textContent = 'Cats 2024';
+    })
+
+    footFoot.addEventListener('mouseenter', () => {
+        footFoot.style.background = 'yellow';
+    })
+
+    footFoot.addEventListener('mouseleave', () => {
+        footFoot.style.background = 'pink';
+    })
+
+
+    /**
+     * Use at least two 
+     * Browser Object Model (BOM) properties or methods.
+     */
+
+ window.alert(window.innerHeight + " " + "innerHeight");
+ alert(location.href + " " + 'Julio Salas'); 
+
+ 
+/**
+ * Include at least one form and/or 
+ * input with DOM event-based validation. 
+ * (This can be the same form or input as 
+ * the one above, but should include 
+ * event-based validation in addition
+ *  to the HTML attribute validation.)
+ */
+
+function err(){
+        let error = document.forms['myForm']['Cname'].value
+        if(error == ""){
+            alert('What is your cat name');
+            return false;
+        } else{
+            alert('Thank you, that is a nice name');
+        }
+}

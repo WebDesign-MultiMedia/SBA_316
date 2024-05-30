@@ -6,7 +6,7 @@
     <title>All About Cats</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="bodyTest">
     <h1 id="newTitle"></h1>
     <h1 id="newTitleTwo"></h1>
     <h2 id="meToby"></h2>
@@ -21,6 +21,8 @@
             </ul>
         </nav>
     </header>
+    
+    
     <main>
         <section id="home">
             <h2>Welcome to the Cat World</h2>
@@ -45,8 +47,24 @@
             <h2>Contact Us</h2>
             <p  class="dis">If you have any questions, feel free to <a href="mailto:info@catworld.com">email us</a>.</p>
         </section>
+        <section class="center">
+            <h2>Cat Name</h2>
+          <div class="liStyle">Toby</div>
+          <div class="liStyle">Mik</div>
+          <div class="liStyle">We'llSee</div>
+        </section>
+        <section> 
+            <form action="" name="myForm" onsubmit="return err()">
+            <label for="Email">Email</label> <br>
+            <!--   Include at least one form and/or 
+   input with HTML attribute validation.-->
+            <input type="email" id="text" name="email" placeholder="Email" pattern='"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"' required>
+            <br><label for="catName">Your Cat Name</label> <br>
+            <input type="text" id="name" name="Cname" placeholder="Cats Name" minlength="5" maxlength="10" >
+               <br> <button>Submit</button>
+            </form></section>
     </main>
-    <footer>
+    <footer class="newStyle">
         <p>&copy; 2024 All About Cats</p>
     </footer>
 
